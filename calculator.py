@@ -64,10 +64,20 @@ while True:
         result = mod(float(num1), float(num2))
 
     elif operator == "x+":
-        result = add_mult(float(num1), float(num2), float(num3))
-
+        if len(tokens) != 4:
+            print("That operator takes 3 numbers.")
+            print("Try again with 3 numbers.")
+            continue
+        else:
+            result = add_mult(float(num1), float(num2), float(num3))
+        
     elif operator == "cubes+":
-        result = add_cubes(float(num1), float(num2))
+        if len(tokens) != 3:
+            print("That operator takes 2 numbers.")
+            print("Try again with 2 numbers.")
+            continue
+        else:
+            result = add_cubes(float(num1), float(num2))
 
     else:
         result = "Please enter an operator followed by two integers."
